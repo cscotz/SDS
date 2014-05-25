@@ -49,3 +49,9 @@ data_melt <- melt(data_raw,id=c("Subject","Activity_ID","Activity"))
 
 #Recast data to calculate means of each feature, segregated by subject and activity
 data_tidy<-dcast(data_melt, Subject + Activity + Activity_ID ~ variable, fun.aggregate=mean)
+
+#Write tidy data to space delimited text file
+write.table(data_tidy,"UCI_HAR_TIDY.txt")
+
+#Write tidy data to CSV file
+write.csv(tidy_data,"UCI_HAR_TIDY.csv")
