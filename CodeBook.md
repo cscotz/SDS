@@ -1,7 +1,26 @@
-==
 CodeBook.md
+===
 
+The orginal data for this project represents data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
+The original data set can be downloaded from:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+To simplify the dataset, the orignal dataset was filtered to only variables denoting mean and standard deviations.
+
+In the variables,
+- Subject identifies the subject who performed the activity.
+- Activity links the class labels with their activity name.
+- Activity_ID is the activity ID number
+- prefix "t" refers to the time domain and prefix "f" refers to the frequency domain
+- "acc" refers to accelerometer data and "gyro" refers to gyroscope data
+- "X", "Y", and "Z" refer to the three axial signals
+- "mean" are mean values, "std" are standard deviations
+
+The variable names were then cleaned up to remove parenthesis and to replace dashes with dots.
+
+The tidy dataset ("UCI_HAR_TIDY.csv" or "UCI_HAR_TIDY.txt") contains 66 variables and three identifiers.  Each variable measurement represents the average value of all measurements for that particular user and activity.
 
 
 |    | Variable Name             |
