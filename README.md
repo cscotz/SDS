@@ -18,22 +18,20 @@ Before the analysis file cam be run, the original data should be downloaded from
 
 ###File Descriptions
 The files used for this analysis are:
-1. activity_labels.txt: 
-2. features.txt: Shows information about the variables used on the feature vector.
-3. subject_test.txt: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
-4. X_test.txt: Test set.
-5. y_test.txt: Test activity labels.
-6. subject_train.txt: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
-7. X_train.txt: Training set.
-8. y_train.txt: Training activity labels. 
+1.  activity_labels.txt: Links the class labels with their activity name.
+2.  features.txt: Shows information about the variables used on the feature vector.
+3.  subject_test.txt: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+4.  X_test.txt: Test set.
+5.  y_test.txt: Test activity labels.
+6.  subject_train.txt: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+7.  X_train.txt: Training set.
+8.  y_train.txt: Training activity labels. 
 
 ###run_analysis.R Description
 The logic behind the code in run_analysis.R is as follows:
 1. The reshape2 library is used to help with tidying the data (line 1).
-2. The original data is read in from the folders (lines 3-15).
-  - The raw data is read in as subject_test_raw, x_test_raw, y_test_raw, subject_train_raw, x_train_raw, and y_train_raw.
-3. The test and training data is merged together (lines 18-21).
-  - The raw data is merged into x_raw, y_raw, and subject_raw. 
+2. The original data is read in from the folders as subject_test_raw, x_test_raw, y_test_raw, subject_train_raw, x_train_raw, and y_train_raw (lines 3-15).
+3. The test and training data is merged together into x_raw, y_raw, and subject_raw (lines 18-21). 
 4. The column names are read from variable names in the features dataset and added to the x_raw dataset (lines 23-24).
 5. The variable names in x_raw are cleaned up to remove parenthesis and to replace dashes with dots for easier reading (lines 26-28).
 6. An addtional column is added to the y_raw dataset to add activity labels next to each activity ID (lines 30-33).
